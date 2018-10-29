@@ -1,6 +1,14 @@
 #!/bin/bash
 ln -sf "$PWD/test.sh" .git/hooks/pre-commit
 
+black --exclude migration app/ --py36 --line-length 100 --check
+rc=$?;
+if [[ $rc != 0 ]];
+then
+    echo "Fix formatting with black --exclude migration app/ --py36 --line-length 100"
+    exit $rc;
+fi
+
 (cd app; pylint app);
 rc=$?;
 if [[ $rc != 0 ]];

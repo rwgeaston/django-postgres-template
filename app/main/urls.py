@@ -6,8 +6,8 @@ from django.urls import path
 from .api.v1 import v1_router
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
-    url(r'^_nested_admin/', include('nested_admin.urls')),
-    url(r'^auth/', include('social_django.urls', namespace='social')),
-    url(r'api/v1/', include(v1_router.urls)),
+    path("admin/", admin.site.urls, name="admin"),
+    url(r"^_nested_admin/", include("nested_admin.urls")),
+    url(r"^auth/", include("social_django.urls", namespace="social")),
+    url(r"api/v1/", include(v1_router.urls)),
 ]
