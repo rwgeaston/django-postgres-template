@@ -28,4 +28,4 @@ For local development you should make a 3.6+ virtualenv and
     pip install -r local_requirements.txt
     ./test.sh
 
-You will have a git precommit hook which runs pylint.
+You will have a git precommit hook which runs pylint, unit tests and python black format enforcer.
