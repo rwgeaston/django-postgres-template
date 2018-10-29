@@ -22,3 +22,10 @@ API with GET/POST/PUT/DELETE is here
 Django admin is, as usual, found at
 
     http://0.0.0.0:8000/admin/
+
+For local development you should make a 3.6+ virtualenv and
+
+    pip install -r local_requirements.txt
+    ./test.sh
+
+You will have a git precommit hook which runs pylint.
