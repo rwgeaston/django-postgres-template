@@ -9,5 +9,13 @@ then
     exit $rc;
 fi
 
+docker-compose run web python app/manage.py test;
+rc=$?;
+if [[ $rc != 0 ]];
+then
+    echo "Fix unit tests"
+    exit $rc;
+fi
+
 echo "Tests pass";
 exit 0;
