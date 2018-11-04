@@ -37,7 +37,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-STATIC_URL = "/static/"
+STATIC_ROOT = "django-static/"
+STATIC_URL = "/django-static/"
 
 try:
     from .local_settings import *  # pylint: disable=wildcard-import,unused-wildcard-import
