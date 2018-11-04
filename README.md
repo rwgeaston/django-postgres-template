@@ -66,3 +66,6 @@ username and other setup.
 
 You might need to chmod +x all the folders down to /files/ and then you should find http://0.0.0.0 and
 http://0.0.0.0/great_document.txt work remotely with the appropriate ip address.
+
+Since nginx is already looking for /admin/ and /api/ from port 8000, you should be able to follow instructions
+ as in local setup and django will be live as well.
