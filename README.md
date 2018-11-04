@@ -56,7 +56,6 @@ Setup EC2 security group which allows inbound 80 and 443 and all outbound. Add y
 
 If you want to clone it to a different folder, you'll have to change some stuff in nginx config.
 
-    cp -R django/files .  # we don't want index.html served from inside django folder
     cp deployment_config/nginx.conf /etc/nginx/conf.d/default.conf
 
 You might need to change some things in default.conf such as ip address, and maybe folder names depending on your
